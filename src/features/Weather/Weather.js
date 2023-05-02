@@ -30,13 +30,18 @@ export default function Weather() {
   }, []);
 
   return (
-    <div>
-      <p>The temperature is {weather.temp}</p>
-      <img
-        src={`https://openweathermap.org/img/wn/${weather.iconId}@2x.png`}
-        alt="icon"
-      />
-      <p>{weather.description}</p>
+    <div className="weather-container">
+      <div className="icon-box">
+        <img
+          src={`https://openweathermap.org/img/wn/${weather.iconId}@2x.png`}
+          alt="icon"
+          className="icon"
+        />
+      </div>
+      <div className="data-description">
+        <div class="temp">{weather.temp}&deg;</div>
+        <div class="description">{weather.description}</div>
+      </div>
     </div>
   );
 }

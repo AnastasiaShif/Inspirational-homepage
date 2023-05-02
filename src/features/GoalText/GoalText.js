@@ -28,6 +28,7 @@ export const GoalText = () => {
 
   return (
     <div id="goal-text-container">
+      <p>What's on your mind today?</p>
       <input
         id="goal-text"
         type="text"
