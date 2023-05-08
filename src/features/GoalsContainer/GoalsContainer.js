@@ -11,7 +11,7 @@ export default function GoalsContainer() {
   //   const dispatch = useDispatch();
 
   return (
-    <div>
+    <div className="goals-container">
       {goals.map((goal, idx) => (
         <Goal goal={goal} key={goal.id} />
       ))}

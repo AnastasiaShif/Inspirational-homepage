@@ -16,12 +16,14 @@ export default function Goal({ goal }) {
   };
   return (
     <div className="goal">
-      <button onClick={onIsCompletedHandler}>Done</button>
-      <button onClick={onRemoveHandler}>Remove</button>
-      <h3 className="recipe-name">
-        id: {goal.id} text: {goal.text} isCompleted:{" "}
-        {goal.isCompleted ? "Yes" : "No"}
-      </h3>
+      <span className="goal-container"></span>
+      <button onClick={onIsCompletedHandler} className="done-button">
+        Done
+      </button>
+      <button onClick={onRemoveHandler} className="completed-button">
+        Remove
+      </button>
+      <h3 className="goal-name">{goal.text}</h3>
     </div>
   );
 }

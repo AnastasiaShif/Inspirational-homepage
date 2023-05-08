@@ -12,11 +12,6 @@ code {
     monospace;
 }
 
-input[type=text] {
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid #000000;
-}
 
 .weather-container {
 
@@ -60,3 +55,105 @@ input[type=text] {
     font-size: 15px;
   }
   
+
+
+  
+  #goal-text-component {
+    border: 1px solid blue;
+    border-radius:16px;
+    background: transparent;
+    width: 98%;
+    margin-top: 20px;
+
+
+  }
+
+  #goal-text {
+
+    text-align: center;
+
+    width: 100%;
+    padding: 9px 25px 9px 40px;
+  
+   font-size: large;
+   font-weight: bold;
+    background-color: #ffffff;
+    outline: none;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #000000;
+    margin-bottom: 25px;
+
+  }
+
+  #goal-text-container{
+    
+    /* margin-top: 30px; */
+      /* position: relative; */
+      /* border-radius: 10px; */
+      border: none;
+     
+
+      padding: 33px 36px 0px 36px;
+      position: relative; 
+  }
+
+  #text-clear-button {
+    position: absolute;
+    right: 42px;
+    top: 36px;
+    bottom: 3px;
+    border: 0;
+    background: none;
+    color: #141c3a;
+    margin: 0;
+    padding: 0 10px;
+    border-radius: 100px;
+    z-index: 2;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
+  .goal-text-header {
+    
+    width: 100%;
+    font-size: 65px;
+  }
+    
+  
+ .goals-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-column-gap: 12px;
+  grid-row-gap: 12px;
+ }
+
+ .goal {
+  padding: 16px 13px 16px 14px;
+  border-radius: 6px;
+  border: solid 1px #141c3a;
+  background-color: none;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+.goal-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 8px;
+}
+.goal-container {
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+.done-button {
+  display: none;
+}
+
+.goal-container:hover + .done-button  {
+  display: inline-block;
+}

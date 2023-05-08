@@ -27,24 +27,26 @@ export const GoalText = () => {
   };
 
   return (
-    <div id="goal-text-container">
-      <p>What's on your mind today?</p>
-      <input
-        id="goal-text"
-        type="text"
-        value={text}
-        onKeyDown={handleKeyDown}
-        onChange={handleChange}
-      />
-      {text.length > 0 && (
-        <button
-          onClick={onClearGoalTextHandler}
-          type="button"
-          id="text-clear-button"
-        >
-          <img src={clearIconUrl} alt="" />
-        </button>
-      )}
+    <div id="goal-text-component">
+      <div className="goal-text-header">What's on your mind today?</div>
+      <div id="goal-text-container">
+        <input
+          id="goal-text"
+          type="text"
+          value={text}
+          onKeyDown={handleKeyDown}
+          onChange={handleChange}
+        />
+        {text.length > 0 && (
+          <button
+            onClick={onClearGoalTextHandler}
+            type="button"
+            id="text-clear-button"
+          >
+            <img src={clearIconUrl} alt="" />
+          </button>
+        )}
+      </div>
     </div>
   );
 };
