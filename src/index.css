@@ -12,13 +12,19 @@ code {
     monospace;
 }
 
+.App {
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+height: 100vh;
 
+}
 .weather-container {
 
-  flex: 0 0 70%;
+  /* flex: 0 0 70%; */
   margin-left:auto;
-  width: 20%;
-  height: 40%;
+  /* width: 20%;
+  height: 40%; */
   background: #080705;
   border-bottom-left-radius:border-radius;
   display:flex;
@@ -121,39 +127,101 @@ code {
     width: 100%;
     font-size: 65px;
   }
+  .goals-container {
+    border: 1px solid blue;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: flex-start;
+    align-content: center;
+    gap:10px 20px;
+    width: 98%;
+    border-radius:16px;
+    background: transparent;
+    height: 200px;
+    overflow-y: auto
+
+
+  }
     
   
- .goals-container{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  grid-column-gap: 12px;
-  grid-row-gap: 12px;
- }
 
- .goal {
-  padding: 16px 13px 16px 14px;
-  border-radius: 6px;
-  border: solid 1px #141c3a;
-  background-color: none;
-  text-align: left;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+
+
+
+.goal-element {
+  position: relative;
+    border: 2px solid purple;
+    border-radius: 10px;
+    margin: 10px;
+   
+  }
+
+.goal-element-text  {
+text-align: center;
+margin: 10px;
+color: white;
+font-weight: lighter;
+
 }
-.goal-name {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 0;
-  margin-bottom: 8px;
+
+
+
+.button-group  {
+  position: absolute;
+  top: -10px;
+right: 0;
+ 
 }
-.goal-container {
-  grid-row-start: 1;
-  grid-column-start: 1;
+
+
+.goal-element-button {
+  margin-left : 5pt;
+
 }
 .done-button {
-  display: none;
+  color:white;
+  background-color: red;
+ border-radius: 5px;
+}
+.remove-button {
+  color:white;
+  background-color: blue;
+ border-radius: 5px;
+}
+.completed-goal {
+  background-color: grey;
 }
 
-.goal-container:hover + .done-button  {
-  display: inline-block;
+#quate-container {
+text-align:center;
+/* position: fixed;
+bottom: 0px; */
+font-size: 20px;
+font-weight: bold;
+width: 100%;
+
+}
+
+
+
+
+.central-element-container {
+  display: flex; 
+  align-items: stretch;
+  align-content: center;
+  border-radius: 10px;
+  border: 1px solid purple;
+}
+
+.central-element-item {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+
+}
+
+.search-and-goals-container {
+  flex-grow: 4;
+  border-radius: 10px;
+  border: 1px solid purple;
 }

@@ -17,12 +17,12 @@ export default function Quate() {
     });
   }, []);
   return (
-    <footer>
+    <div id="quate-container">
       <p>
-        {quate.textQuate}
+        {`"${quate.textQuate}"`}
         <br></br>
         {quate.author}
       </p>
-    </footer>
+    </div>
   );
 }
