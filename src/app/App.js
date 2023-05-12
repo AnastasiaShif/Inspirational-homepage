@@ -6,32 +6,52 @@ import Quate from "../features/Quat/Quat.js";
 
 import { CentralWidjet } from "../features/CentralWidget/CentralWidget.js";
 
-const nextIconUrl =
-  "https://img.icons8.com/ios/50/null/circled-chevron-right--v2.png";
-const prevIconUrl =
-  "https://img.icons8.com/ios/50/null/circled-chevron-left--v2.png";
-
 function App() {
-  const [imgBg, setImgBg] = useState("");
-  let bgImagesArray = [];
+  const [bgImagesArray, setbgImagesArray] = useState([]);
+  //let bgImagesArray = [];
   useEffect(() => {
     axios
       .get(
         `https://api.unsplash.com/photos/?client_id=YhiefUkJ451j8UcwXc8yYxKDWXvEWM2QbuKawUTWxGc`
       )
       .then((response) => {
-        bgImagesArray = response.data.map((obj) => {
+        const newbgImagesArray = response.data.map((obj) => {
           return obj.urls.regular;
         });
-        console.log(bgImagesArray);
-        setImgBg(bgImagesArray[0]);
+
+        setbgImagesArray(newbgImagesArray);
+        //console.log(bgImagesArray);
       });
   }, []);
+  //const imgBg = bgImagesArray[bgImgIndex];
 
+  const [bgImgIndex, setbgimgIndex] = useState(0);
+  const goToNext = () => {
+    // console.log("going to next");
+    setbgimgIndex((prevIndex) => {
+      if (prevIndex == bgImagesArray.length - 1) {
+        return 0;
+      }
+      return prevIndex + 1;
+    });
+  };
+
+  const goBack = () => {
+    setbgimgIndex((prevIndex) => {
+      if (prevIndex == 0) {
+        return bgImagesArray.length - 1;
+      }
+      return prevIndex - 1;
+    });
+  };
+  // console.log(bgImagesArray);
   return (
-    <div className="App" style={{ "background-image": `url(${imgBg})` }}>
+    <div
+      className="App"
+      style={{ backgroundImage: `url(${bgImagesArray[bgImgIndex]})` }}
+    >
       <Weather />
-      <CentralWidjet />
+      <CentralWidjet goBack={goBack} goToNext={goToNext} />
 
       <Quate />
     </div>

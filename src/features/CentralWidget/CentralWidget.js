@@ -6,11 +6,16 @@ const nextIconUrl =
 const prevIconUrl =
   "https://img.icons8.com/ios/50/null/circled-chevron-left--v2.png";
 
-export function CentralWidjet() {
+export function CentralWidjet(props) {
   return (
     <div className="central-element-container">
       <div className="central-element-item">
-        <img src={prevIconUrl} alt="nextButton" className="directionButton" />
+        <img
+          src={prevIconUrl}
+          alt="nextButton"
+          className="directionButton"
+          onClick={props.goBack}
+        />
       </div>
       <div className="central-element-item search-and-goals-container">
         <GoalText />
@@ -18,7 +23,12 @@ export function CentralWidjet() {
       </div>
 
       <div className="central-element-item">
-        <img src={nextIconUrl} alt="nextButton" className="directionButton" />
+        <img
+          src={nextIconUrl}
+          alt="nextButton"
+          className="directionButton"
+          onClick={props.goToNext}
+        />
       </div>
     </div>
   );

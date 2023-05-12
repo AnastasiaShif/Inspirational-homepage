@@ -39,8 +39,8 @@ export default function Weather() {
         />
       </div>
       <div className="data-description">
-        <div class="temp">{weather.temp}&deg;</div>
-        <div class="description">{weather.description}</div>
+        <div className="temp">{weather.temp}&deg;</div>
+        <div className="description">{weather.description}</div>
       </div>
     </div>
   );
