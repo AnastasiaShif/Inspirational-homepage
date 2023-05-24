@@ -1,4 +1,4 @@
-const initialState = [{ text: "finish she codes", isCompleted: false, id: 0 }];
+const initialState = [];
 
 export const goalsReducer = (goals = initialState, action) => {
   switch (action.type) {
