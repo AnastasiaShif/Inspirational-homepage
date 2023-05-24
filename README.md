@@ -1,3 +1,12 @@
+# Using inspiratonal homepage
+
+On first load, random images of the nature will be loaded. U can change the image by clicking on the left/right arrows.
+You can see a current weather in the right top corner.
+Get inspired by the qoute on the bоttom of the page.
+Please type your daily goals in the input field and add it the goals container by clicking Enter.
+Erase the goal from the input field by clicking on "X".
+Remove or set as done any of your goals.
+
 # Getting Started with Create React App and Redux
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
