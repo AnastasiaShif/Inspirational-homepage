@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Goal from "../../components/Goal";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 import { selectGoals } from "./goalsSlice.js";
 
@@ -8,7 +8,6 @@ export default function GoalsContainer() {
   useEffect(() => {}, []);
 
   const goals = useSelector(selectGoals);
-  //   const dispatch = useDispatch();
 
   return (
     <div className="goals-container">
