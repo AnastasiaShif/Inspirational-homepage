@@ -2,7 +2,7 @@ import { addGoal } from "../GoalsContainer/goalsSlice";
 
 import { useDispatch } from "react-redux";
 import { useState } from "react";
-import { clearGoalText } from "./goalTextSlice";
+//import { clearGoalText } from "./goalTextSlice";
 
 const clearIconUrl =
   "https://static-assets.codecademy.com/Courses/Learn-Redux/Recipes-App/icons/clear.svg";

@@ -26,7 +26,7 @@ function App() {
   const [bgImgIndex, setbgimgIndex] = useState(0);
   const goToNext = () => {
     setbgimgIndex((prevIndex) => {
-      if (prevIndex == bgImagesArray.length - 1) {
+      if (prevIndex === bgImagesArray.length - 1) {
         return 0;
       }
       return prevIndex + 1;
@@ -35,7 +35,7 @@ function App() {
 
   const goBack = () => {
     setbgimgIndex((prevIndex) => {
-      if (prevIndex == 0) {
+      if (prevIndex === 0) {
         return bgImagesArray.length - 1;
       }
       return prevIndex - 1;

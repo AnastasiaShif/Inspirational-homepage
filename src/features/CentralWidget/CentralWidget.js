@@ -4,11 +4,6 @@ import Icon from "@mdi/react";
 import { mdiChevronLeft } from "@mdi/js";
 import { mdiChevronRight } from "@mdi/js";
 
-const nextIconUrl =
-  "https://img.icons8.com/ios/50/null/circled-chevron-right--v2.png";
-const prevIconUrl =
-  "https://img.icons8.com/ios/50/null/circled-chevron-left--v2.png";
-
 export function CentralWidjet(props) {
   return (
     <div className="central-element-container">

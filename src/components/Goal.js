@@ -17,14 +17,15 @@ export default function Goal({ goal }) {
     //console.log(goal);
     dispatch(removeGoal(goal));
   };
-  const colors = [
-    "rgba(0, 0, 255, 0.3)",
-    "rgba(255, 0, 0, 0.3)",
-    "rgba(255,165,0,0.3)",
-    "rgba(0, 255, 0, 0.3)",
-    "rgba(255,255,0,0.3)",
-  ];
+
   const getRandomColor = () => {
+    const colors = [
+      "rgba(0, 0, 255, 0.3)",
+      "rgba(255, 0, 0, 0.3)",
+      "rgba(255,165,0,0.3)",
+      "rgba(0, 255, 0, 0.3)",
+      "rgba(255,255,0,0.3)",
+    ];
     const colorIndex = Math.floor(Math.random() * colors.length);
     setColor(colors[colorIndex]);
   };
