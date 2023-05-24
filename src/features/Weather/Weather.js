@@ -6,7 +6,7 @@ export default function Weather() {
   useEffect(() => {
     axios
       .get(
-        `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=406326005765abc9e74f815ec5b33c41`
+        `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=406326005765abc9e74f815ec5b33c41`
       )
       .then((response) => {
         console.log(response);
