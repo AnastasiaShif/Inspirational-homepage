@@ -8,11 +8,11 @@ import { CentralWidjet } from "../features/CentralWidget/CentralWidget.js";
 
 function App() {
   const [bgImagesArray, setbgImagesArray] = useState([]);
-  //let bgImagesArray = [];
+
   useEffect(() => {
     axios
       .get(
-        `https://api.unsplash.com/photos/?client_id=YhiefUkJ451j8UcwXc8yYxKDWXvEWM2QbuKawUTWxGc`
+        `https://api.unsplash.com/photos/random/?topics=6sMVjTLSkeQ;count=10;client_id=YhiefUkJ451j8UcwXc8yYxKDWXvEWM2QbuKawUTWxGc`
       )
       .then((response) => {
         const newbgImagesArray = response.data.map((obj) => {
@@ -20,14 +20,11 @@ function App() {
         });
 
         setbgImagesArray(newbgImagesArray);
-        //console.log(bgImagesArray);
       });
   }, []);
-  //const imgBg = bgImagesArray[bgImgIndex];
 
   const [bgImgIndex, setbgimgIndex] = useState(0);
   const goToNext = () => {
-    // console.log("going to next");
     setbgimgIndex((prevIndex) => {
       if (prevIndex == bgImagesArray.length - 1) {
         return 0;
@@ -44,16 +41,27 @@ function App() {
       return prevIndex - 1;
     });
   };
-  // console.log(bgImagesArray);
-  return (
-    <div
-      className="App"
-      style={{ backgroundImage: `url(${bgImagesArray[bgImgIndex]})` }}
-    >
-      <Weather />
-      <CentralWidjet goBack={goBack} goToNext={goToNext} />
 
-      <Quate />
+  return (
+    <div className="App">
+      <div
+        className="backgraund-component"
+        style={{
+          backgroundImage: `url(${bgImagesArray[bgImgIndex]})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          width: "100vw",
+          height: "100vh",
+          //filter: "blur(px)",
+        }}
+      ></div>
+      <div className="widgets-component">
+        <Weather />
+        <CentralWidjet goBack={goBack} goToNext={goToNext} />
+
+        <Quate />
+      </div>
     </div>
   );
 }

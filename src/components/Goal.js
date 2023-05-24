@@ -17,7 +17,13 @@ export default function Goal({ goal }) {
     //console.log(goal);
     dispatch(removeGoal(goal));
   };
-  const colors = ["blue", "red", "orange", "green", "yellow"];
+  const colors = [
+    "rgba(0, 0, 255, 0.3)",
+    "rgba(255, 0, 0, 0.3)",
+    "rgba(255,165,0,0.3)",
+    "rgba(0, 255, 0, 0.3)",
+    "rgba(255,255,0,0.3)",
+  ];
   const getRandomColor = () => {
     const colorIndex = Math.floor(Math.random() * colors.length);
     setColor(colors[colorIndex]);
@@ -27,7 +33,7 @@ export default function Goal({ goal }) {
   return (
     <div
       className={`goal-element ${goal.isCompleted ? "completed-goal" : ""}`}
-      style={goal.isCompleted ? {} : { background: color }}
+      style={goal.isCompleted ? {} : { backgroundColor: color }}
       onMouseEnter={(e) => {
         setIsHover({ display: "block" });
       }}

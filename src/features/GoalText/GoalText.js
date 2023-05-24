@@ -16,6 +16,7 @@ export const GoalText = () => {
     if (event.key === "Enter") {
       // Lets submit the new goal now!
       dispatch(addGoal(text));
+      setText("");
     }
   };
 
