@@ -13,7 +13,7 @@ export const GoalText = () => {
   const dispatch = useDispatch();
 
   const handleKeyDown = (event) => {
-    if (event.key === "Enter") {
+    if (event.key === "Enter" && text.length > 0) {
       // Lets submit the new goal now!
       dispatch(addGoal(text));
       setText("");

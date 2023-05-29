@@ -117,8 +117,9 @@ filter: blur(5px);
       border: none;
      
 
-      padding: 33px 36px 0px 36px;
+      padding: 10px 36px 0px 36px;
       position: relative; 
+
   }
 
   #text-clear-button {
@@ -147,6 +148,7 @@ filter: blur(5px);
     /* mix-blend-mode: difference; */
     
     font-weight:bold;
+    margin-top:10px;
     /* text-align: left; */
     /* margin-left: 25px; */
   }
@@ -155,7 +157,7 @@ filter: blur(5px);
     /* border: 1px solid blue; */
     display: flex;
     flex-wrap:wrap;
-    justify-content: flex-start;
+    justify-content: flex-start safe;
     align-content: center;
     gap:10px 20px;
     width: 98%;
