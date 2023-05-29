@@ -23,6 +23,7 @@ export default function Weather() {
               iconId: res.data.weather[0].icon,
               iconSrc: `https://openweathermap.org/img/wn/${res.data.weather[0].icon}@2x.png`,
               description: res.data.weather[0].description,
+              city: city,
             };
             setWeather(newWeatherObj);
           });
