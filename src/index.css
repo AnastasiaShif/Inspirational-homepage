@@ -35,12 +35,8 @@ filter: blur(5px);
 
 .weather-container {
 
-  /* flex: 0 0 70%; */
-  margin-left:auto;
-  /* width: 20%;
-  height: 40%; */
- 
   
+  margin-left:auto;
   border-bottom-left-radius:border-radius;
   display:flex;
   align-items: center;
@@ -150,11 +146,10 @@ filter: blur(5px);
     /* mix-blend-mode: difference; */
     
     font-weight:bold;
+    /* text-align: left; */
+    /* margin-left: 25px; */
   }
-  .directionButton{
-   color: white;
-   opacity: 0.6;
-  }
+
   .goals-container {
     /* border: 1px solid blue; */
     display: flex;
@@ -171,6 +166,29 @@ filter: blur(5px);
 
 
   }
+
+  @media screen and (max-width: 599px) {
+    .goal-text-header-small {
+      font-size: 35px;
+    }
+    /* TODO resolve later */
+    /* .goals-container-mini {
+      height: auto;
+      overflow-y: none;
+    } */
+  }
+
+  @media screen and (min-width: 600px) and (max-width: 1200px) {
+    .goal-text-header-small {
+      font-size: 45px;
+    }
+  }
+
+  .directionButton{
+   color: white;
+   opacity: 0.6;
+  }
+  
     
   
 

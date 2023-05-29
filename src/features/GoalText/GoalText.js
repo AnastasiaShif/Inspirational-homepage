@@ -29,7 +29,9 @@ export const GoalText = () => {
 
   return (
     <div id="goal-text-component">
-      <div className="goal-text-header">What's on your mind today?</div>
+      <div className="goal-text-header goal-text-header-small">
+        What's on your mind today?
+      </div>
       <div id="goal-text-container">
         <input
           id="goal-text"

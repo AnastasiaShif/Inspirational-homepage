@@ -10,7 +10,7 @@ export default function GoalsContainer() {
   const goals = useSelector(selectGoals);
 
   return (
-    <div className="goals-container">
+    <div className="goals-container goals-container-mini">
       {goals.map((goal, idx) => (
         <Goal goal={goal} key={goal.id} />
       ))}
