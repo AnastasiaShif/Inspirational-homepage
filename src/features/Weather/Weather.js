@@ -39,7 +39,7 @@ export default function Weather() {
         />
       </div>
       <div className="data-description">
-        <div className="temp">{weather.temp}&deg;</div>
+        <div className="temp">{Math.round(weather.temp)}&deg;</div>
         <div className="description">{weather.description}</div>
       </div>
     </div>
